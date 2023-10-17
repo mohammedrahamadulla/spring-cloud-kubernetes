@@ -78,13 +78,13 @@ pipeline {
              
 	    }
 	    }
-		stage("rollback deployment") {
-	        steps {	            	         	           
-	              sh """
-	                   kubectl delete deploy ${params.AppName}
-					    kubectl delete svc ${params.AppName}
-				  """	       
-	        }
-	    }
+	//	stage("rollback deployment") {
+	  //      steps {	            	         	           
+	  //            sh """
+	   //                kubectl delete deploy ${params.AppName}
+	//				    kubectl delete svc ${params.AppName}
+	//			  """	       
+	   //     }
+	  //  }
     }
 }
